@@ -24,3 +24,8 @@ test_that("fars_read_years returns a list of data frames", {
 test_that("fars_read_years generates a warning for invalid year", {
     expect_warning(fars_read_years(2000), "invalid year: 2000")
 })
+
+test_that("fars_summarize_years returns a data frame", {
+    df <- fars_summarize_years(2013:2014)
+    expect_is(df, "data.frame")
+})
