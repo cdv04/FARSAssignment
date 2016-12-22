@@ -29,3 +29,5 @@ test_that("fars_summarize_years returns a data frame", {
     df <- fars_summarize_years(2013:2014)
     expect_is(df, "data.frame")
 })
+
+# TODO: figure out how to test fars_map_state
