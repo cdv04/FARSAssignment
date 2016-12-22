@@ -56,7 +56,7 @@ make_filename <- function(year) {
 #'
 fars_read_years <- function(years) {
         lapply(years, function(year) {
-                file <- make_filename(year)
+                file <- system.file("extdata", make_filename(year), package = "FARSAssignment")
                 tryCatch({
                         dat <- fars_read(file)
                         dplyr::mutate(dat, year = year) %>%
@@ -110,7 +110,7 @@ fars_summarize_years <- function(years) {
 #' fars_map_state(19, 2015) # 19 is Iowa
 #'
 fars_map_state <- function(state.num, year) {
-        filename <- make_filename(year)
+        filename <- system.file("extdata", make_filename(year), package = "FARSAssignment")
         data <- fars_read(filename)
         state.num <- as.integer(state.num)
 
