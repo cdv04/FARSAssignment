@@ -14,3 +14,13 @@ test_that("fars_read generates an error if the file doesn't exist", {
 test_that("make_filename returns a proper filename", {
     expect_match(make_filename(2015), "accident_2015.csv.bz2")
 })
+
+test_that("fars_read_years returns a list of data frames", {
+    result <- fars_read_years(2013:2014)
+    expect_is(result, "list")
+    expect_is(result[[1]], "data.frame")
+})
+
+test_that("fars_read_years generates a warning for invalid year", {
+    expect_warning(fars_read_years(2000), "invalid year: 2000")
+})
