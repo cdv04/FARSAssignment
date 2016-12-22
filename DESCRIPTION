@@ -1,11 +1,15 @@
 Package: FARSAssignment
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Summarize and map FARS data
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: David W. Body
+Maintainer: David W. Body <davidbody@bigcreek.com>
+Description: Summarize and map data from the US National Highway Traffic
+    Safety Administration's Fatality Analysis Reporting System (FARS).
+    The package contains FARS accident data for 2013, 2014, and 2015, and
+    includes functions to read and summarize the data by year and month, as
+    well as to plot state maps showing accident locations by year.
+    This is the week 4 assignment for Building R Packages (Coursera).
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
