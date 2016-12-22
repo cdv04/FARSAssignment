@@ -1,0 +1,74 @@
+---
+title: "FARS Functions"
+author: "David W. Body"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This package contains several functions that summarize and map data from the US National Highway Traffic Safety Administration's [Fatality Analysis Reporting System (FARS)](http://www-fars.nhtsa.dot.gov/Main/index.aspx).
+
+The package contains FARS accident data for 2013, 2014, and 2015, and includes functions to read and summarize the data by year and month, as well as to plot state maps showing accident locations by year.
+
+This is the week 4 assignment for [Building R Packages (Coursera)](https://www.coursera.org/learn/r-packages/).
+
+## Functions
+
+The package contains the following functions
+
+- `fars_read`
+- `make_filename`
+- `fars_read_years`
+- `fars_summarize_years`
+- `fars_map_state`
+
+#### fars_read
+
+```{r, eval=FALSE}
+fars_read(filename)
+```
+
+Reads data from a FARS data file. Returns a data frame.
+
+#### make_filename
+
+```{r, eval=FALSE}
+make_filename(2013)
+```
+
+Makes a FARS filename for a specified year. Returns a character string.
+
+#### fars_read_years
+
+```{r, eval=FALSE}
+fars_read_years(2013:2015)
+```
+
+Returns a list of data frames, one per year.
+
+#### fars_summarize_years
+
+```{r, eval=FALSE}
+fars_summarize_years(2013:2015)
+```
+
+Summarizes FARS crash data by year and month. Returns a data frame.
+
+#### fars_map_state
+
+```{r, eval=FALSE}
+fars_map_state(state_code, year)
+```
+
+Plots a map showing FARS crash locations for a specified state and year.
+
+See https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812315 (PDF), p. 26 for a list of state codes.
+
+*Note for `fars_map_state`*
+
+> In order for `fars_map_state` to work, the `maps` package must be loaded so
+> that the the `stateMapEnv` object is available. (The `maps` package does not
+> export `stateMapEnv`.) Do this by running `library(maps)`.
