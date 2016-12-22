@@ -19,6 +19,7 @@ Reads data from a FARS data file.
 Generates an error if the file does not exist.
 }
 \examples{
+filename <- system.file("extdata", make_filename(2015), package = "FARSAssignment")
 data <- fars_read(filename)
 }
 

@@ -11,6 +11,7 @@
 #' @export
 #'
 #' @examples
+#' filename <- system.file("extdata", make_filename(2015), package = "FARSAssignment")
 #' data <- fars_read(filename)
 fars_read <- function(filename) {
         if(!file.exists(filename))
@@ -29,7 +30,6 @@ fars_read <- function(filename) {
 #' @export
 #'
 #' @examples
-#' filename <- make_filename(year)
 #' filename <- make_filename(2015)
 #'
 make_filename <- function(year) {
@@ -107,6 +107,7 @@ fars_summarize_years <- function(years) {
 #' @export
 #'
 #' @examples
+#' library(maps)
 #' fars_map_state(19, 2015) # 19 is Iowa
 #'
 fars_map_state <- function(state.num, year) {

@@ -24,6 +24,7 @@ Crashes with \code{LOGITUD > 900} or \code{LATITUDE > 90} are excluded.
 Invalid \code{state} or \code{year} values will produce errors.
 }
 \examples{
+library(maps)
 fars_map_state(19, 2015) # 19 is Iowa
 
 }

@@ -16,7 +16,6 @@ A character string containing the filename.
 Makes a FARS filename for a specified year
 }
 \examples{
-filename <- make_filename(year)
 filename <- make_filename(2015)
 
 }
