@@ -7,7 +7,7 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{state.num}{Integer state code. See \url{https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812316} (PDF), p. 24 for a list.}
+\item{state.num}{Integer state code. See \url{https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812315} (PDF), p. 26 for a list.}
 
 \item{year}{Integer year.}
 }

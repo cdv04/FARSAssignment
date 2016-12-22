@@ -100,7 +100,7 @@ fars_summarize_years <- function(years) {
 #'
 #' Invalid \code{state} or \code{year} values will produce errors.
 #'
-#' @param state.num Integer state code. See \url{https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812316} (PDF), p. 24 for a list.
+#' @param state.num Integer state code. See \url{https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812315} (PDF), p. 26 for a list.
 #' @param year Integer year.
 #'
 #' @return NULL
